@@ -13,6 +13,10 @@ public class Point implements Geometry {
         this.coordinate = coordinate;
     }
 
+    public Coordinate getCoordinate() {
+        return coordinate;
+    }
+
     @Override
     public String getType() {
         return "Point";
