@@ -16,4 +16,18 @@ public class PointTest {
 		Assert.assertEquals(1.2, p.getCoordinate().getY(), EPSILON);
 		
 	}
+
+	@Test
+	public void getTypeMethod() {
+
+		Point p = new Point();
+		Assert.assertEquals("Point", p.getType());
+	}
+
+	@Test
+	public void isEmptyMethod(){
+
+		Point p = new Point();
+		Assert.assertTrue(p.isEmpty());
+	}
 }

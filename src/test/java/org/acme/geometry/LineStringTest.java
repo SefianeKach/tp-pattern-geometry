@@ -65,7 +65,12 @@ public class LineStringTest {
     }
     
     
-    
+    @Test
+	public void isEmptyMethod(){
+
+		LineString l = new LineString();
+		Assert.assertTrue(l.isEmpty());
+	}
 }
 
 
