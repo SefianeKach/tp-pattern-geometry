@@ -1,5 +1,6 @@
 package org.acme.geometry;
 
-public class Geometry {
-    
+interface Geometry {
+   
+    public String getType(); 
 }
