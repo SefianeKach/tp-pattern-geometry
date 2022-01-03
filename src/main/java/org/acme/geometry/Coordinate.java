@@ -2,8 +2,8 @@ package org.acme.geometry;
 
 public class Coordinate {
     
-    double x ;
-    double y ;
+    private double x ;
+    private double y ;
 
     public Coordinate() {
         this.x = 0.0;
@@ -15,22 +15,16 @@ public class Coordinate {
         this.y = y;
     }
 
-}
 
-public void Coordinate() {
+    public double getX(){
+        return x;
+    }
     
+    public double getY(){
+        return y;
+    }
 }
 
-public void Coordinate(double x, double y) {
-    
-}
 
 
-public double getX(){
-    return x;
-}
-
-public double getY(){
-    return y;
-}
 
