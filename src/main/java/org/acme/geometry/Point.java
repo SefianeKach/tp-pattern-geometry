@@ -27,6 +27,15 @@ public class Point implements Geometry {
         return coordinate.isEmpty();
     }
 
+    @Override
+    public void translate(double dx, double dy) {
+
+        this.coordinate = new Coordinate(
+            coordinate.getX() + dx,
+            coordinate.getY() + dy
+         );
+    }
+
 }
 
 
