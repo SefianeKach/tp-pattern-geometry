@@ -77,6 +77,17 @@ public class LineStringTest {
 		Assert.assertEquals(1.0, points.get(0).getCoordinate().getX(), EPSILON);
 	}
 
+	@Test
+	public void cloneMethod(){
+
+		List<Point> points = new ArrayList<Point>();
+		points.add(createPointO());
+		LineString l = new LineString(points);
+		Geometry copy = l.clone();
+		copy.translate(1.0, 1.0);
+		Assert.assertEquals(0.0, l.getPointN(0).getCoordinate().getX(), EPSILON);
+	}
+
 }
 
 
