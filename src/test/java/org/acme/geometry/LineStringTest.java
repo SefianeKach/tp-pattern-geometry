@@ -88,4 +88,14 @@ public class LineStringTest {
 		Assert.assertEquals(0.0, l.getPointN(0).getCoordinate().getX(), EPSILON);
 	}
 
+	@Test
+	public void envelopeMethod(){
+
+		List<Point> points = new ArrayList<Point>();
+		points.add(createPointO());
+		points.add(createPointA());
+		LineString l = new LineString(points);
+		Assert.assertEquals(0.0, l.getEnvelope().getXmin(), EPSILON);
+	}
+
 }
