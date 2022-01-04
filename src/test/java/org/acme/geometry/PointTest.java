@@ -60,4 +60,11 @@ public class PointTest {
 		Point p = new Point(new Coordinate(0.0, 1.0));
 		Assert.assertEquals(0.0, p.getEnvelope().getXmin(), EPSILON);
 	}
+
+	@Test
+	public void asTextMethod(){
+
+		Point p = new Point(new Coordinate(3.0, 4.0));
+		Assert.assertEquals("POINT(3.0 4.0)", p.asText());
+	}
 }
