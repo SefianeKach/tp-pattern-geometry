@@ -74,7 +74,7 @@ public class LineStringTest {
 		points.add(createPointO());
 		LineString l = new LineString(points);
 		l.translate(1.0, 1.0);
-		Assert.assertEquals(1.0, points.get(0).getCoordinate().getX(), EPSILON);
+		Assert.assertEquals(1.0, l.getPointN(0).getCoordinate().getX(), EPSILON);
 	}
 
 	@Test
@@ -89,8 +89,3 @@ public class LineStringTest {
 	}
 
 }
-
-
-
-
-
