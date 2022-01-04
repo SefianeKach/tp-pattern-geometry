@@ -36,6 +36,12 @@ public class Point implements Geometry {
          );
     }
 
+    @Override
+    public Geometry clone() {
+
+        return new Point(coordinate);
+    }
+
 }
 
 
