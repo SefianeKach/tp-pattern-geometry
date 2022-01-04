@@ -1,24 +1,25 @@
 package org.acme.geometry;
 
-public class Point implements Geometry {
+public class Point extends AbstractGeometry {
 
     private Coordinate coordinate;
 
     public Point() {
         this.coordinate = new Coordinate();
-        
     }
-    
+
     public Point(Coordinate coordinate) {
         this.coordinate = coordinate;
     }
 
     public Coordinate getCoordinate() {
-        return coordinate;
+        
+        return this.coordinate;
     }
 
     @Override
     public String getType() {
+  
         return "Point";
     }
 
@@ -37,12 +38,6 @@ public class Point implements Geometry {
     }
 
     @Override
-    public Geometry clone() {
-
-        return new Point(coordinate);
-    }
-
-    @Override
     public Envelope getEnvelope() {
         
         EnvelopeBuilder builder = new EnvelopeBuilder();
@@ -52,11 +47,13 @@ public class Point implements Geometry {
     }
 
     @Override
+    public Geometry clone() {
+
+        return new Point(coordinate);
+    }
+
+    @Override
     public void accept(GeometryVisitor visitor) {
         visitor.visit(this);
     }
-
 }
-
-
-
