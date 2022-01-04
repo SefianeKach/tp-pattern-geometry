@@ -12,16 +12,16 @@ public class LogGeometryVisitor implements GeometryVisitor {
 
     @Override
     public void visit(Point point) {
-        String strPoint = "Je suis un point avec x=";
+        String strPoint = "Point with : x=";
         strPoint += point.getCoordinate().getX();
-        strPoint += " et y=" + point.getCoordinate().getY();
+        strPoint += " & y=" + point.getCoordinate().getY();
         out.println(strPoint);
     }
 
     @Override
     public void visit(LineString LineString) {
-        String strPolyligne = "Je suis une polyligne définie par ";
-        strPolyligne += LineString.getNumPoints() + " point(s)";
+        String strPolyligne = "Polygon defined by ";
+        strPolyligne += LineString.getNumPoints() + " Point";
         out.println(strPolyligne);
     }
 
