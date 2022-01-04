@@ -53,5 +53,12 @@ public class PointTest {
 		p2.translate(1.0, 1.0);
 		Assert.assertEquals(0.0, p1.getCoordinate().getX(), EPSILON);
 	}
+
+	@Test
+	public void envelopeMethod(){
+
+		Point p = new Point(new Coordinate(0.0, 1.0));
+		Assert.assertEquals(0.0, p.getEnvelope().getXmin(), EPSILON);
+	}
 	
 }
